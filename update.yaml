@@ -1,0 +1,16 @@
+---
+- name: Atualizar sistemas Ubuntu
+  hosts: seus_hosts
+  become: yes
+
+  tasks:
+    - name: Atualizar lista de pacotes
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+
+    - name: Atualizar pacotes
+      apt:
+        upgrade: yes
+        autoremove: yes
+        autoclean: yes
