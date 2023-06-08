@@ -1,6 +1,6 @@
 ---
 - name: Atualizar sistemas Ubuntu
-  hosts: seus_hosts
+  hosts: all
   become: yes
 
   tasks:
